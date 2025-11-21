@@ -1,0 +1,34 @@
+---
+import BaseLayout from "../layouts/baseLayout.astro";
+import Header from "../components/header.astro";
+import Footer from "../components/footer.astro";
+import CardProducto from "../components/cardProducto.astro";
+---
+<BaseLayout title="Inicio - Software Suites">
+	<Header slot="header" />
+	<!--Hero -->
+	<section slot="" id="hero" class="hero" aria-label="Presentación del paquete">
+		<div>
+			<h1>Potencia tu trabajo con nuestras suites de software</h1>
+			<p>Incluye editor de textos, editor de imágenes, editor de vídeo y un IDE integrado.</p>
+			<p>
+				<a class="btn btn-primary" href="/productos">Ver productos</a>
+				<a class="btn btn-ghost" href="/precios">Ver precios</a>
+			</p>
+			<div class="hero-image" aria-hidden="true">Imagen del paquete software</div>
+		</div>
+	</section>
+
+	<!-- Herramientas -->
+	<section id="herramientas" class="container" aria-label="Herramientas incluidas">
+		<h2>Herramientas incluidas</h2>
+		<div class="grid-4">
+			<CardProducto id="p-texto" nombre="Editor de textos" descripcion="Crea y edita documentos fácilmente" imagen="/images/editor-texto.png" href="/precios" />
+			<CardProducto id="p-imagen" nombre="Editor de imágenes" descripcion="Retoque y composición" imagen="/images/editor-imagen.png" href="/precios" />
+			<CardProducto id="p-video" nombre="Editor de video" descripcion="Edición no lineal y exportación" imagen="/images/editor-video.png" href="/precios" />
+			<CardProducto id="p-ide" nombre="IDE" descripcion="Entorno de desarrollo integrado" imagen="/images/ide.png" href="/precios" />
+		</div>
+	</section>
+		
+	<Footer slot="footer" />
+</BaseLayout>

@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../layouts/baseLayout.astro";
+import Header from "../components/header.astro";
+import Footer from "../components/footer.astro";
+import CardPlan from "../components/cardPlan.astro";
+---
+<BaseLayout title="Precios">
+	<Header slot="header" />
+
+    <section id="precios" class="container">
+        <h1>Planes de Suscripción</h1>
+        <p class="muted">Elige el plan que mejor se adapta a tus necesidades.</p>
+
+        <div class="plans-grid">
+            <CardPlan id="basico" nombre="Plan Básico" precio="9.99€" descripcion="Incluye funciones esenciales" caracteristicas={["Característica 1", "Característica 2","Característica 3"]} ctaHref="/carrito" />
+            <CardPlan id="pro" nombre="Plan Pro (Popular)" precio="19.99€" descripcion="Para suarios avanzados" caracteristicas={["Característica 1", "Característica 2","Característica 3", "Característica 4"]} ctaHref="/carrito" recommended={true}/>
+            <CardPlan id="enterprise" nombre="Plan Empresario" precio="49.99€" descripcion="Soluciones para empresas" caracteristicas={["Soporte prioritario", "Usuarios ilimitados","Intedraciones"]} ctaHref="/carrito" />
+        </div>
+    </section>
+
+    <Footer slot="footer" />
+</BaseLayout>

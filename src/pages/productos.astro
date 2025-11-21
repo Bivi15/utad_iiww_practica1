@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../layouts/baseLayout.astro";
+import Header from "../components/header.astro";
+import Footer from "../components/footer.astro";
+import CardProducto from "../components/cardProducto.astro";
+---
+<BaseLayout title="Ejecución del Pago">
+    <Header slot="header" />
+    <main id="productos" class="container" role="main" aria-labelledby="productos-title">
+        <h1 id="productos-title">Nuestros Productos</h1>
+        <p class="lead">
+            Herramientas profesionales diseñadas para mejorar tu flujo de trabajo. Todas están incluidas en los planes de suscripción.
+        </p>
+
+        <section class="grid-4" aria-label="Listado de herramientas disponibles">
+            <CardProducto id="p-texto" nombre="Editor de textos" descripcion="Crea y edita documentos fácilmente" imagen="/images/editor-texto.png" href="/precios" />
+			<CardProducto id="p-imagen" nombre="Editor de imágenes" descripcion="Retoque y composición" imagen="/images/editor-imagen.png" href="/precios" />
+			<CardProducto id="p-video" nombre="Editor de video" descripcion="Edición no lineal y exportación" imagen="/images/editor-video.png" href="/precios" />
+			<CardProducto id="p-ide" nombre="IDE" descripcion="Entorno de desarrollo integrado" imagen="/images/ide.png" href="/precios" />
+        </section>
+
+        <div class="cta-precios">
+            <p>Quieres acceder a todas estas herramientas?</p>
+            <a href="/precios" class="btn btn-primary" aria-label="Ir a la sección de precios">Ver planes y precios</a>
+        </div>
+    </main>
+	<Footer slot="footer" />
+</BaseLayout>

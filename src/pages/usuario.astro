@@ -1,0 +1,36 @@
+---
+import BaseLayout from "../layouts/baseLayout.astro";
+import Header from "../components/header.astro";
+---
+<BaseLayout title="Usuario">
+    <Header slot="header" />
+    <main>
+        <section id="info-usuario">
+            <h1>Mi Cuenta</h1>
+
+            <article class="usuario-datos">
+                <div class="foto-perfil" aria-hidden="true">Imagen / Icono</div>
+
+                <div class="info-texto">
+                    <h2>Nombre del usuario</h2>
+                    <p class="email">usuario@email.com</p>
+                    <p class="miembro-desde">Miembro desde: 01/01/2024</p>
+                </div>
+            </article>
+
+            <article class="suscription">
+                <h2>Suscripción Activa</h2>
+                    <p><strong>Plan:</strong>Pro</p>
+                    <p><strong>Estado:</strong>Activo</p>
+                    <p><strong>Renovación:</strong>01/02/2025</p>
+                    <p><strong>Precio:</strong>19.99€/mes</p>
+            </article>
+
+            <aside class="acciones-usuario">
+                <button class="btn-secundario">Cerrar sesión</button>
+                <a href="/precios" class="btn-primary">Cambiar plan</a>
+            </aside>
+        </section>
+    </main>
+
+</BaseLayout>

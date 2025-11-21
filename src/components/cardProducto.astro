@@ -1,0 +1,11 @@
+---
+const {id, nombre, descripcion, imagen = '/images/editor-text.png', href = '/productos'} = Astro.props;
+---
+<article class="card producto" id={id} role="article">
+    <img src="{imagen}" alt={`Image: ${nombre}`} class="producto-img" />
+    <div class="producto-body">
+        <h3>{nombre}</h3>
+        <p>{descripcion}</p>
+        <a class="btn btn-secondary" href={href} aria-label={`Ver ${nombre}`}><button>Ver Precios</button></a>
+    </div>
+</article>

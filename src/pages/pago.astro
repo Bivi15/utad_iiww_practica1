@@ -1,0 +1,45 @@
+---
+import BaseLayout from "../layouts/baseLayout.astro";
+import Header from "../components/header.astro";
+import Footer from "../components/footer.astro";
+---
+<BaseLayout title="Ejecución del Pago">
+    <Header slot="header" />
+    <main>
+        <section id="pago">
+            <h1>Confirmación y Pago</h1>
+
+            <article class="resumen-pedido">
+                <h2>Resumen del pedido</h2>
+                <p><strong>Plan Pro - Suscripción Mensual</strong></p>
+                <p>Facturación automática mensual</p>
+                <p class="precio-final">17.99€</p>
+            </article>
+
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Método de Pago</legend>
+
+                    <div class="form-group">
+                        <label for="tarjeta">Número de trajeta</label>
+                        <input id="tarjeta" type="text" name="tarjeta" required placeholder="XXXX XXXX XXXX XXXX" />
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha">Fecha de caducidad (MM/AA)</label>
+                        <input id="fecha" type="text" name="fecha" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input id="cvv" type="password" name="cvv" required />
+                    </div>
+                    <div class="total-a-pagar">
+                        <strong>Total a pagar: 17.99€</strong>
+                    </div>
+
+                    <button type="submit" class="btn-success">Confirmar y Pagar</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+	<Footer slot="footer" />
+</BaseLayout>

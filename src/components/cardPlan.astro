@@ -1,0 +1,17 @@
+---
+const {id, nombre, precio, descripcion, caracteristicas = [], ctaHref = '/carrito', recommended = false} = Astro.props;
+---
+<article class="card plan" id={id} aria-labelledby={`plan-${id}`} role="region">
+    <header>
+        <h3 id="{`plan-${id}`}">{nombre}</h3>
+        {recommended ? <span class="badge">Recommendado</span> : null}
+    </header>
+    <div class="plan-price" aria-hidden="false">{precio}</div>
+    <p class="plan-desc">{descripcion}</p>
+    <ul class="plan-caracteristicas">
+        {caracteristicas.map((f: unknown) => <li>{f}</li>)}
+    </ul>
+    <footer>
+        <a class="btn btn-primary" href={ctaHref} aria-label={`Seleccionar ${nombre}`}>Seleccionar Plan</a>
+    </footer>
+</article>

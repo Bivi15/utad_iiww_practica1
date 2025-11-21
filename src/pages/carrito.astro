@@ -1,0 +1,37 @@
+---
+import BaseLayout from "../layouts/baseLayout.astro";
+import Header from "../components/header.astro";
+import Footer from "../components/footer.astro";
+---
+<BaseLayout title="Carrito de compra">
+    <Header slot="header" />
+    <main>
+        <section id="carrito">
+            <h1>Carrito de compra</h1>
+
+            <article class="item-carrito">
+                <h2>Plan Pro - Suscripción Mensual</h2>
+                <p>Acceso completo a todas las herramientas</p>
+                <p>Facturación mensual - Cancela cuando quieras</p>
+                <p class="precio">19.99€</p>
+            </article>
+
+            <article class="codigo-descuento">
+                <h3>Descuento aplicado</h3>
+                <form action="#" method="post">
+                    <label for="codigo"></label>
+                    <input type="text" name="codigo" placeholder="Introduce código promocional" />
+                    <button type="submit">Aplicar</button>
+                    <button type="button">Eliminar</button>
+                </form>
+            </article>
+
+            <div class="total-compra">
+                <h3>TOTAL</h3>
+                <p><strong>17.99€/mes</strong> (con descuento aplicado)</p>
+            </div>
+            <a href="/envio" class="btn-primary">Proceder al pago</a>
+        </section>
+    </main>
+	<Footer slot="footer" />
+</BaseLayout>    

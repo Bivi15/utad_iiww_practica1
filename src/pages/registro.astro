@@ -1,0 +1,36 @@
+---
+import BaseLayout from "../layouts/baseLayout.astro";
+import Header from "../components/header.astro";
+import Footer from "../components/footer.astro";
+---
+<BaseLayout title="Registro">
+	<Header slot="header" />
+    <section id="registro" class="container form-container" aria-labelledby="registro-title">
+        <h1 id="registro-title">Registro de usuario</h1>
+        <form method="post" novalidate>
+            <div class="form-row">
+                <label for="nombre">Nombre completo:</label>
+                <input id="nombre" type="text" name="nombre" required autocomplete="nombre" placeholder="Nombre completo" />
+            </div>
+            <div class="form-row">
+                <label for="email">Email:</label>
+                <input id="email" type="email" name="email" required autocomplete="email" placeholder="correo@ejemplo.com" />
+            </div>
+            <div class="form-row">
+                <label for="contrasena">Contraseña:</label>
+                <input id="contrasena" type="password" name="contrasena" required minlength="8" placeholder="*******" autocomplete="new-password"/>
+            </div>
+            <div class="form-row">
+                <label for="contrasena2">Confirmar contraseña:</label>
+                <input id="contrasena2" type="password" name="contrasena2" required minlength="8" placeholder="*******" autocomplete="new-password"/>
+            </div>
+            <div class="form-row">
+                <button type="submit" class="btn btn-primary">Registrarse</button>
+            </div>
+            
+            <p class="muted">Ya tienes cuenta? <a href="/login">Inicia sesión</a></p>
+        </form>
+    </section>
+
+	<Footer slot="footer" />
+</BaseLayout>

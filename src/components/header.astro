@@ -1,0 +1,24 @@
+<header aria-label="Barra de navegación principal">
+    <div class="container nav-container">
+        <div class="brand">
+            <a href="/" aria-label="Ir al inicio">
+                <img src="#" alt="logo" width="48" height="48">
+            </a>
+        </div>
+        <nav aria-label="Menú principal">
+            <ul class="nav-list">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/productos">Productos</a></li>
+                <li><a href="/precios">Precios</a></li>
+            </ul>
+        </nav>
+        <div class="nav-actions">
+            <form role="search" action="/productos" method="get" class="search-form" aria-label="Buscar productos">
+                <label for="buscar" class="visually-hidden">Buscar</label>
+                <input id="buscar" name="buscar" type="search" placeholder="Buscar">
+            </form>
+
+            <a href="/login" class="btn btn-ghost">Login</a>
+        </div>
+    </div>
+</header>
