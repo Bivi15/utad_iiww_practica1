@@ -1,3 +1,5 @@
+# Sandra Biviana Vega Dussán
+
 # Astro Starter Kit: Basics
 
 ```sh
